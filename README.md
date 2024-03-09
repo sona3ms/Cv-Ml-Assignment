@@ -53,3 +53,23 @@ The CNN model architecture consists of convolutional layers followed by max-pool
 - PIL (Python Imaging Library)
 - pytesseract
 
+#Assignment 2
+
+#Step:
+1.Define the Matrix: The input matrix is represented as a NumPy ndarray, which is a suitable data structure for numerical operations.
+
+2.Define the Window Size: The window size is specified as 2x2, as per the example provided in the question.
+
+3.Define the max_pooling_basic Function: This function iterates over each position of the moving window in the input matrix and calculates the maximum value within that window. It utilizes nested loops to iterate over each position and numpy's max function to find the maximum value within the window.
+
+4.Call the max_pooling_basic Function: The function is called with the input matrix and window size, and the result is stored in the variable result.
+
+5.Print the Result: The resulting matrix, which contains the maximum value for each position of the moving window, is printed to the console.
+
+#Note:
+To improve the performance,a more optimized algorithm could maintain a data structure (such as a priority queue or heap) that efficiently tracks the maximum value within the window as it moves across the matrix.
+
+#Efficency
+1.The original implementation has a time complexity of O(m^2 * k^2), where m is the size of the input matrix and k is the size of the window. This is because, in the worst case, we need to iterate over each position of the matrix and within each position, iterate over each element of the window to find the maximum value.
+
+2. Heap implemntation has a time complexity of O(m^2 * k log(k)
